@@ -1,0 +1,33 @@
+# ---------- Python ----------
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------- Secrets (NEVER commit) ----------
+.env
+*.env
+*.lic          
+*.k4           
+*.pem          
+.aws/
+
+# ---------- kdb+ data & logs ----------
+hdb/           
+logs/
+*.log
+tplog/         
+
+# ---------- Terraform (later, for AWS) ----------
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars       
+crash.log
+
+# ---------- Editor / OS ----------
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/

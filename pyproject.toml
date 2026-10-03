@@ -1,0 +1,10 @@
+[project]
+name = "kdb-bedrock-tick"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pykx>=4.1.0",
+    "websockets>=17.2",
+]
