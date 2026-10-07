@@ -1,21 +1,21 @@
 / feedsim.q - random trade/quote generator for testing
 / usage (startq from repo root)
 / q q/feedsim.q
-\l q/schema.q 
+\l q/schema.q
 
 
 /-----helpers------
 /stamps: n timestamps, 1ms apart, starting now
 
-stamps:{[n] .z.p+100000*til n}
+stamps:{[n] .z.p+1000000*til n}
 
 
 /randwalk: n prices starting near px0, each step upto +/-0.5 basis points
 
-randwalk:{[n;px0] px0+sums px0*0.0001*-0.5+n?1.0}
+randWalk:{[n;px0] px0+sums px0*0.0001*-0.5+n?1.0}
 
 /exchLag: exchange tiemstamps 1ns to 1ms before our receive times t
-exchLag:{[t] t-1+(count t)?1000000}
+exchLag:{[t] t-1+(count t)?100000}
 
 /---generators----
 /genTrades n random trades for sym s arond price px0
